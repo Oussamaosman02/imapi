@@ -30,9 +30,9 @@ if (empty($_SESSION['correo'])) {
     echo "Nombre: " . ($reg['nombre']);
     echo "Apellidos: " . ($reg['apellidos']);
     echo "Mail: " . ($reg['mail']);
+    echo "<img src='https://api.dicebear.com/5.x/avataaars/svg?seed=" . $reg['nombre'] . "' width='200' alt=''>";
     ?>
     <a href="/imapi/logout">
-
         <button>Cerrar Sesión</button>
     </a>
 </body>
