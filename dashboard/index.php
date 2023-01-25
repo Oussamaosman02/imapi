@@ -28,5 +28,8 @@ if (empty($_SESSION['correo'])) {
     <a href="/imapi/logout">
         <button>Cerrar Sesión</button>
     </a>
+    <a href="/imapi/dashboard/profile">
+        <button>Ir al perfil</button>
+    </a>
 </body>
 </html>
