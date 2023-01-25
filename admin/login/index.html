@@ -1,0 +1,39 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Admin</title>
+    <link rel="stylesheet" href="../../src/styles/loginadmin.module.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div>
+        <img src="../../public/android-chrome-192x192.png" alt="imagen" />
+        <h2>IMAPI</h2>
+      </div>
+      <ul>
+        <li>
+          <a href="#">Nosotros</a>
+        </li>
+        <li>
+          <a href="#">Precios</a>
+        </li>
+        <li>
+          <a href="#">Soporte</a>
+        </li>
+        <li>
+          <a href="#">Ejemplos</a>
+        </li>
+      </ul>
+      <a href="/imapi/dashboard">Entrar</a>
+    </nav>
+    <h1>Iniciar sesión Admin</h1>
+    <form action="login.php" method="post">
+      <input type="email" name="mail" placeholder="Mail" />
+      <input type="password" name="contra" placeholder="Contraseña" />
+      <input type="submit" value="Entrar" />
+    </form>
+  </body>
+</html>
