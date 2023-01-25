@@ -1,8 +1,17 @@
 <?php
 session_start();
-
 if (empty($_SESSION['correo'])) {
   header("location: /imapi/login");
+}
+$mail = $_SESSION['correo'];
+$conection = new mysqli("localhost", "root", "", "api");
+$conection->set_charset("utf8");
+$consulta = "SELECT * FROM admins WHERE mail='$mail'";
+$registros = mysqli_query($conection, $consulta)
+  or die("Problemas" . mysqli_error($conection));
+$reg = mysqli_fetch_array($registros);
+if (!$reg) {
+  header("location: /imapi/admin/login");
 }
 ?>
 <html lang="es">
@@ -16,21 +25,15 @@ if (empty($_SESSION['correo'])) {
 </head>
 
 <body>
-  <?php
-  $mail = $_SESSION['correo'];
-  $conection = new mysqli("localhost", "root", "", "api");
-  $conection->set_charset("utf8");
-  $consulta = "SELECT * FROM users WHERE mail='$mail'";
-  $registros = mysqli_query($conection, $consulta)
-    or die("Problemas" . mysqli_error($conection));
-  $reg = mysqli_fetch_array($registros);
-  ?>
   <nav>
     <div>
       <img src="../public/android-chrome-192x192.png" alt="imagen" />
       <h2>IMAPI x <?php echo ($reg['nombre']); ?></h2>
     </div>
     <ul>
+      <li>
+        <a href="/imapi/admin/add">Añadir Admin</a>
+      </li>
       <li>
         <a href="/imapi/dashboard">Dashboard</a>
       </li>
