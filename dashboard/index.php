@@ -30,6 +30,17 @@ if (empty($_SESSION['correo'])) {
             <h2>IMAPI x <?php echo ($reg['nombre']); ?></h2>
         </div>
         <ul>
+            <?php
+            $admconsulta = "SELECT * FROM admins WHERE mail='$mail'";
+            $admregistros = mysqli_query($conection, $admconsulta)
+                or die("Problemas" . mysqli_error($conection));
+            $admreg = mysqli_fetch_array($admregistros);
+            if ($admreg) {
+                echo "<li>";
+                echo "<a href='/imapi/admin/'>Admin</a>";
+                echo "</li>";
+            }
+            ?>
             <li>
                 <a href="/imapi/logout">Cerrar Sesión</a>
             </li>
