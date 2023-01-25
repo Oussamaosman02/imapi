@@ -66,7 +66,6 @@ if (empty($_SESSION['correo'])) {
             echo "<img src='$imagen'  style='--w:$width ;--h: $height;' alt='imagen de $imagen' />";
         }
         ?>
-        <img src="" alt="">
     </div>
 </body>
 
