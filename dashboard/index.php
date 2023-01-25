@@ -63,7 +63,7 @@ if (empty($_SESSION['correo'])) {
             $imagen = $fila['imagen'];
             $width = $fila['width'];
             $height = $fila['height'];
-            echo "<img src='https://api.dicebear.com/5.x/avataaars/svg?seed=$imagen'  style='--w:$width ;--h: $height;' alt='imagen de $imagen' />";
+            echo "<img src='$imagen'  style='--w:$width ;--h: $height;' alt='imagen de $imagen' />";
         }
         ?>
         <img src="" alt="">
