@@ -31,5 +31,16 @@ if (empty($_SESSION['correo'])) {
     <a href="/imapi/dashboard/profile">
         <button>Ir al perfil</button>
     </a>
+
+    <?php
+       $conection = new mysqli("localhost", "root", "", "api");
+       $conection->set_charset("utf8");
+       $consulta = "SELECT * FROM imgs";
+       $registros = mysqli_query($conection, $consulta)
+       or die("Problemas" . mysqli_error($conection));
+   while ($fila = $registros->fetch_assoc()) {
+       echo "<img src='https://api.dicebear.com/5.x/avataaars/svg?seed=" . $fila['imagen'] . "' width='".$fila['width']."' alt=''>";
+    }
+    ?>
 </body>
 </html>
