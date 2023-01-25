@@ -8,36 +8,6 @@
   --fondo: #141412;
   --rosa: #a22571;
   --texto: #5a5653;
-
-  --primary-100: #fdfff2;
-  --primary-200: #faffc1;
-  --primary-300: #fcfd8f;
-  --primary-400: #faf35d;
-  --primary: #f2de2c;
-  --primary-600: #bfa30f;
-  --primary-700: #8c6f03;
-  --primary-800: #594100;
-  --primary-900: #261a00;
-
-  --accent-100: #fff2f7;
-  --accent-200: #ffc4dd;
-  --accent-300: #fd96c8;
-  --accent-400: #fa66b6;
-  --accent: #f238a8;
-  --accent-600: #bf1685;
-  --accent-700: #8c0867;
-  --accent-800: #590346;
-  --accent-900: #260120;
-
-  --neutral-100: #fcfcfa;
-  --neutral-200: #ebebe6;
-  --neutral-300: #dadad2;
-  --neutral-400: #c9c8bf;
-  --neutral: #b8b6ad;
-  --neutral-600: #939189;
-  --neutral-700: #6f6c66;
-  --neutral-800: #4b4844;
-  --neutral-900: #262522;
 }
 
 * {
