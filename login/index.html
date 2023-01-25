@@ -4,12 +4,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log In</title>
+    <link rel="stylesheet" href="../src/styles/login.module.css" />
   </head>
   <body>
+    <nav>
+      <div>
+        <img src="../public/android-chrome-192x192.png" alt="imagen" />
+        <h2>IMAPI</h2>
+      </div>
+      <ul>
+        <li>
+          <a href="#">Nosotros</a>
+        </li>
+        <li>
+          <a href="#">Precios</a>
+        </li>
+        <li>
+          <a href="#">Soporte</a>
+        </li>
+        <li>
+          <a href="#">Ejemplos</a>
+        </li>
+      </ul>
+      <a href="/imapi/dashboard">Entrar</a>
+    </nav>
+    <h1>Entrar</h1>
     <form action="login.php" method="post">
-      <input type="email" placeholder="mail" name="mail" id="mail" />
-      <input type="password" placeholder="password" name="passwd" id="passwd" />
-      <input type="submit" value="Enviar" />
+      <input type="email" placeholder="Mail" name="mail" id="mail" />
+      <input type="password" placeholder="Contraseña" name="passwd" id="passwd" />
+      <input type="submit" value="Entrar" />
     </form>
   </body>
 </html>

@@ -1,0 +1,145 @@
+:root {
+    /**/
+    --verde: #1d2100;
+    --marron: #403700;
+    --titulos: #e7c080;
+    --gris: #76766e;
+    --tit-blanco: #c7c4bf;
+    --fondo: #141412;
+    --rosa: #a22571;
+    --texto: #5a5653;
+  }
+  
+  * {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 10%;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  a:active,
+  a:link {
+    text-decoration: none;
+  }
+  
+  nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+    gap: 3%;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+  }
+  
+  nav div {
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav div img {
+    width: 10%;
+  }
+  
+  nav > a {
+    text-align: center;
+    width: 6%;
+    color: var(--titulos);
+    margin-right: 1%;
+    background-color: var(--verde);
+    padding: 2px;
+    border-radius: 25px;
+  }
+  
+  nav ul li {
+    list-style: none;
+    color: var(--titulos);
+    position: relative;
+  }
+  
+  nav ul li:nth-child(2)::after {
+    position: absolute;
+    content: ".";
+    background-color: var(--rosa);
+    color: transparent;
+    border-radius: 50px;
+    width: 7px;
+    height: 7px;
+    right: -3.5px;
+    top: 1px;
+  }
+  
+  h1 {
+    color: var(--titulos);
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  form input {
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid var(--gris);
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--titulos);
+  }
+  
+  form input::placeholder {
+    color: var(--rosa);
+  }
+  
+  form input[type="submit"],
+  form input[type="reset"] {
+    text-align: center;
+    color: var(--tit-blanco);
+    font-weight: 700;
+    background-color: var(--marron);
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0px 1px 10px var(--primary-700);
+  }
+  
+  form input[type="submit"]:hover,
+  form input[type="reset"]:hover {
+    background-color: var(--fondo);
+    box-shadow: 0px 1px 1px var(--gris);
+    color: var(--marron);
+  }
+  
+  b {
+    color: var(--tit-blanco);
+  }
+  
