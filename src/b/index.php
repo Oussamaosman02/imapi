@@ -1,9 +1,8 @@
 <?php
-$user = $_GET['user'];
+$user = $_GET['u'];
 
-$conection = new mysqli("localhost", "root", "", "api");
-$conection->set_charset("utf8");
+require $_SERVER['DOCUMENT_ROOT'] . "/imapi/src/models/conn.php";
 
-$del = "DELETE FROM `users` WHERE nombre='$user';";
+$del = "DELETE FROM `users` WHERE mail='$user';";
 mysqli_query($conection, $del);
 echo "usuario borrado:" . $user;

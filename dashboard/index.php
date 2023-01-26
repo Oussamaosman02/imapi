@@ -17,12 +17,9 @@ if (empty($_SESSION['correo'])) {
 <body>
     <?php
     $mail = $_SESSION['correo'];
-    $conection = new mysqli("localhost", "root", "", "api");
-    $conection->set_charset("utf8");
     $consulta = "SELECT * FROM users WHERE mail='$mail'";
-    $registros = mysqli_query($conection, $consulta)
-        or die("Problemas" . mysqli_error($conection));
-    $reg = mysqli_fetch_array($registros);
+    require $_SERVER['DOCUMENT_ROOT'] . "/imapi/src/models/consulta.php";
+
     ?>
     <nav>
         <div>

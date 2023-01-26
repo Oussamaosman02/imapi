@@ -4,12 +4,9 @@ if (empty($_SESSION['correo'])) {
   header("location: /imapi/login");
 }
 $mail = $_SESSION['correo'];
-$conection = new mysqli("localhost", "root", "", "api");
-$conection->set_charset("utf8");
 $consulta = "SELECT * FROM admins WHERE mail='$mail'";
-$registros = mysqli_query($conection, $consulta)
-  or die("Problemas" . mysqli_error($conection));
-$reg = mysqli_fetch_array($registros);
+require $_SERVER['DOCUMENT_ROOT'] . "/imapi/src/models/consulta.php";
+
 if (!$reg) {
   header("location: /imapi/admin/login");
 }

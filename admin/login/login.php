@@ -4,15 +4,10 @@ session_start();
 $mail = $_POST['mail'];
 $password = $_POST['contra'];
 
-$conection = new mysqli("localhost", "root", "", "api");
-$conection->set_charset("utf8");
-
 $consulta = "SELECT * FROM admins WHERE mail='$mail'";
+require $_SERVER['DOCUMENT_ROOT'] . "/imapi/src/models/consulta.php";
 
-$registros = mysqli_query($conection, $consulta)
-    or die("Problemas" . mysqli_error($conection));
-
-if ($reg = mysqli_fetch_array($registros)) {
+if ($reg) {
     if (password_verify($password, $reg['passwd'])) {
         $_SESSION['correo'] = $mail;
         header("location: /imapi/admin");
