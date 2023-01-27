@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log In</title>
     <link rel="stylesheet" href="../src/styles/login.module.css" />
+    <link
+      rel="shortcut icon"
+      href="/imapi/public/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="apple-touch-icon" href="/imapi/public/apple-touch-icon.png" />
+    <link rel="manifest" href="/imapi/public/manifest.json" />
   </head>
   <body>
     <nav>
@@ -31,7 +38,12 @@
     <h1>Entrar</h1>
     <form action="login.php" method="post">
       <input type="email" placeholder="Mail" name="mail" id="mail" />
-      <input type="password" placeholder="Contraseña" name="passwd" id="passwd" />
+      <input
+        type="password"
+        placeholder="Contraseña"
+        name="passwd"
+        id="passwd"
+      />
       <input type="submit" value="Entrar" />
     </form>
   </body>
