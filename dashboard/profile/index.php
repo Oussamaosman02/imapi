@@ -51,28 +51,33 @@ if (empty($_SESSION['correo'])) {
       <h2>Tus datos</h2>
       <h3>Nombre: <b><?php echo $reg['nombre']; ?></b> </h3>
       <h3>Apellidos: <b><?php echo $reg['apellidos']; ?></b> </h3>
-      <h3>Crreo: <b><?php echo $reg['mail']; ?> </h3></b>
+      <h3>Correo: <b><?php echo $reg['mail']; ?> </h3></b>
+      <br />
+      <?php
+      echo "<a href='/imapi/src/b/?u=$mail'><button class='borrar'>Borrar cuenta</button></a>";
+      echo "¡No se puede deshacer esta acción!";
+      ?>
     </section>
     <section>
       <article>
-        <h4>Mail</h4>
-        <form action="newmail.php" method="post">
-          <input type="text" name="cambio" placeholder="Nuevo Mail" />
+        <h4>Nombre</h4>
+        <form action="newname.php" method="post">
+          <input type="text" name="cambio" required placeholder="Nuevo Nombre" />
           <input type="submit" />
         </form>
       </article>
       <article>
-        <h4>Nombre</h4>
-        <form action="newname.php" method="post">
-          <input type="text" name="cambio" placeholder="Nuevo Nombre" />
+        <h4>Mail</h4>
+        <form action="newmail.php" method="post">
+          <input type="text" name="cambio" required placeholder="Nuevo Mail" />
           <input type="submit" />
         </form>
       </article>
       <article>
         <h4>Contraseña</h4>
         <form action="newpasswd.php" method="post">
-          <input type="text" name="contra" placeholder="Contraseña Actual" />
-          <input type="text" name="cambio" placeholder="Contraseña nueva" />
+          <input type="text" name="contra" required placeholder="Contraseña Actual" />
+          <input type="text" name="cambio" required placeholder="Contraseña nueva" />
           <input type="submit" />
         </form>
       </article>
