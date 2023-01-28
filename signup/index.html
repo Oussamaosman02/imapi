@@ -36,7 +36,12 @@
       <a href="/imapi/login/">Entrar</a>
     </nav>
     <h1>Registrate</h1>
-    <form action="signup.php" method="post" onsubmit="return handleSubmit()">
+    <form
+      onsubmit="return handleSubmit()"
+      action="signup.php"
+      method="post"
+      id="formulario"
+    >
       <input type="text" name="nombre" placeholder="Nombre" id="nombre" />
       <input
         type="text"
@@ -45,12 +50,11 @@
         required
         id="apellidos"
       />
-      <input type="email" name="mail" placeholder="Mail" required id="mail" />
+      <input type="email" name="mail" placeholder="Mail" id="mail" />
       <input
         type="password"
         name="password"
         placeholder="Contraseña"
-        required
         id="passwd"
       />
       <input
@@ -69,18 +73,6 @@
       </div>
     </form>
     <a href="/imapi/login/">¿Tienes cuenta?. <b>Inicia sesion</b></a>
-    <script>
-      const $ = (sel) => document.querySelector(sel);
-      const $v = (sel) => document.querySelector(sel).value;
-      function handleSubmit() {
-        if ($v("#nombre").length < 1) {
-          alert("Hace falta el nombre");
-          return false;
-        } else if (!$("#politica").checked) {
-          alert("Debes aceptar la política de privacidad");
-          return false;
-        }
-      }
-    </script>
+    <script src="../src/js/main.js"></script>
   </body>
 </html>
