@@ -53,10 +53,13 @@ if (empty($_SESSION['correo'])) {
       <h3>Apellidos: <b><?php echo $reg['apellidos']; ?></b> </h3>
       <h3>Correo: <b><?php echo $reg['mail']; ?> </h3></b>
       <br />
-      <?php
-      echo "<a href='/imapi/src/b/?u=$mail'><button class='borrar'>Borrar cuenta</button></a>";
-      echo "¡No se puede deshacer esta acción!";
-      ?>
+      <form action="deleteaccount.php" method="post">
+        <?php
+        echo "<input type='hidden' name='cambio' value='$mail'>";
+        ?>
+        <button class="borrar">Borrar Cuenta</button>
+        ¡No se puede deshacer esta acción!
+      </form>
     </section>
     <section>
       <article>
