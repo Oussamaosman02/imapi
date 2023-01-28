@@ -85,6 +85,10 @@ Por ejemplo, al modificar la contraseña, se hace una verificación de que la 'c
 
 ![newpasswd.php](./public/imgs/newpasswdphp.png)
 
+En esta página también se puede borrar la cuenta. Se usa un input de tipo `hidden` que envía el correo al archivo `deleteaccount.php`, que contiene esto:
+
+![deleteaccount.php](./public/imgs/deleteaccountphp.png)
+
 ### Cerrar sesión: `/logout`
 
 Esto lleva al `logout`, el cual contiene el siguiente código:
