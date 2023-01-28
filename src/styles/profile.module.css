@@ -184,8 +184,33 @@ b {
   border-radius: 10px;
 }
 
-.borrar:hover{
+.borrar:hover {
   background-color: transparent;
   color: red;
   border: 1px solid var(--gris);
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  nav div {
+    font-size: 60%;
+  }
+
+  nav div img {
+    width: 40%;
+  }
+
+  .avatar img {
+    width: 60%;
+  }
+  .root {
+    flex-direction: column;
+  }
+  .root section {
+    width: 80%;
+  }
 }

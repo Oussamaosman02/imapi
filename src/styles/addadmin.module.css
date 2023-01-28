@@ -121,3 +121,22 @@ form input[type="reset"]:hover {
 b {
   color: var(--tit-blanco);
 }
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    width: 70%;
+  }
+
+  nav div img {
+    width: 40%;
+  }
+
+  nav > a {
+    width: 10%;
+    margin-right: 5%;
+  }
+
+  form {
+    gap: 20px;
+  }
+}

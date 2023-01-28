@@ -145,3 +145,28 @@ form option {
 b {
   color: var(--tit-blanco);
 }
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    justify-content: space-between;
+    width: 40%;
+    font-size: 80%;
+  }
+
+  nav div {
+    font-size: 60%;
+  }
+
+  nav div img {
+    width: 40%;
+  }
+  .avatar img {
+    width: 60%;
+  }
+  .avatar::after {
+    font-size: 140%;
+  }
+  form {
+    gap: 20px;
+  }
+}

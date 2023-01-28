@@ -105,3 +105,22 @@ nav ul li {
   border: 1px solid var(--gris);
   margin: 2vw;
 }
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  nav div {
+    font-size: 60%;
+  }
+
+  nav div img {
+    width: 40%;
+  }
+
+  .avatar img {
+    width: 60%;
+  }
+}
