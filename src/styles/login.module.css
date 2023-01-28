@@ -82,7 +82,7 @@
     position: relative;
   }
   
-  nav ul li:nth-child(2)::after {
+  nav ul li::after {
     position: absolute;
     content: ".";
     background-color: var(--rosa);
