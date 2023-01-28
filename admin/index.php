@@ -46,8 +46,8 @@ if (!$reg) {
   </nav>
   <h1>Añadir a la bd:</h1>
   <form action="img.php" method="post" onsubmit="return handleSubmit()">
-    <input type="number" name="width" id="width" placeholder="width" />
-    <input type="number" name="height" id="height" placeholder="height" />
+    <input type="number" name="width" required id="width" placeholder="width" />
+    <input type="number" name="height" required id="height" placeholder="height" />
     <input type="text" name="imagen" id="imagen" placeholder="imagen" />
     <input type="text" name="extension" id="extension" placeholder="extension" />
     <select name="tipo" id="tipo">
@@ -57,11 +57,10 @@ if (!$reg) {
     <input type="submit" value="Enviar" />
   </form>
   <script>
-    const $ = (sel) => document.querySelector(sel);
-    const $v = (sel) => document.querySelector(sel).value;
+    const imagen = document.getElementById("imagen");
 
     function handleSubmit() {
-      if ($v("#imagen").length < 1) {
+      if (!imagen.value) {
         alert("Hace falta imagen");
         return false;
       }
