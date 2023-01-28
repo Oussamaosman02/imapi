@@ -49,10 +49,11 @@ nav {
 
 nav ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
   text-align: center;
   width: 70%;
+  gap: 10%;
 }
 
 nav div {
@@ -66,32 +67,10 @@ nav div img {
   width: 10%;
 }
 
-nav > a {
-  text-align: center;
-  width: 6%;
-  color: var(--titulos);
-  margin-right: 1%;
-  background-color: var(--verde);
-  padding: 2px;
-  border-radius: 25px;
-}
-
 nav ul li {
   list-style: none;
   color: var(--titulos);
   position: relative;
-}
-
-nav ul li:nth-child(2)::after {
-  position: absolute;
-  content: ".";
-  background-color: var(--rosa);
-  color: transparent;
-  border-radius: 50px;
-  width: 7px;
-  height: 7px;
-  right: -3.5px;
-  top: 1px;
 }
 
 h1 {

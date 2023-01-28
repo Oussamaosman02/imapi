@@ -32,19 +32,15 @@ if (!$reg) {
     </div>
     <ul>
       <li>
-        <a href="#">Nosotros</a>
+        <a href="/imapi/logout">Cerrar Sesión</a>
       </li>
       <li>
-        <a href="#">Precios</a>
+        <a href="/imapi/admin/">Admin</a>
       </li>
       <li>
-        <a href="#">Soporte</a>
-      </li>
-      <li>
-        <a href="#">Ejemplos</a>
+        <a href="/imapi/dashboard">Dashboard</a>
       </li>
     </ul>
-    <a href="/imapi/dashboard">Entrar</a>
   </nav>
   <h1>Nuevo admin</h1>
   <form action="nuevoadmin.php" method="post">
