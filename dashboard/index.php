@@ -54,15 +54,16 @@ if (empty($_SESSION['correo'])) {
     <h1>Imágenes disponibles</h1>
     <div class="img">
         <?php
-        $conection = new mysqli("localhost", "root", "", "api");
-        $conection->set_charset("utf8");
-        $consulta = "SELECT * FROM imgs where tipo='gratis'";
-        $registros = mysqli_query($conection, $consulta)
-            or die("Problemas" . mysqli_error($conection));
-        while ($fila = $registros->fetch_assoc()) {
-            $imagen = $fila['imagen'];
-            $width = $fila['width'];
-            $height = $fila['height'];
+        //consulta a realizar
+        $consulta = "SELECT * FROM imgs";
+        //obtener la consulta
+        require $_SERVER['DOCUMENT_ROOT'] . "/imapi/src/models/consulta.php";
+        //bucle para sacar todos los datos
+        while ($dato = $registros->fetch_assoc()) {
+            $imagen = $dato['imagen'];
+            $width = $dato['width'];
+            $height = $dato['height'];
+            //imagen con la altura y anchura propios de la imagen
             echo "<img src='$imagen'  style='--w:$width ;--h: $height;' alt='imagen de $imagen' />";
         }
         ?>
