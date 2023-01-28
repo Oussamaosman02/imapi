@@ -176,3 +176,16 @@ b {
 .root section article:focus {
   background-color: var(--verde);
 }
+
+.borrar {
+  background-color: red;
+  border: 1px solid red;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.borrar:hover{
+  background-color: transparent;
+  color: red;
+  border: 1px solid var(--gris);
+}
