@@ -55,7 +55,7 @@ if (empty($_SESSION['correo'])) {
       <br />
       <form action="deleteaccount.php" method="post">
         <?php
-        echo "<input type='hidden' name='cambio' value='$mail'>";
+        echo "<input type='hidden' name='cambio' value='$mail' />";
         ?>
         <input type="submit" class="borrar" value="Borrar Cuenta" />
         ¡No se puede deshacer esta acción!
