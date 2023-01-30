@@ -72,7 +72,7 @@ if (empty($_SESSION['correo'])) {
       <article>
         <h4>Mail</h4>
         <form action="newmail.php" method="post">
-          <input type="text" pattern="[A-Za-z0-9_-]{1,30}" name="cambio" required placeholder="Nuevo Mail" />
+          <input type="mail" pattern="[A-Za-z0-9_-]{1,30}" name="cambio" required placeholder="Nuevo Mail" />
           <input type="submit" />
         </form>
       </article>
