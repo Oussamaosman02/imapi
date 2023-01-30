@@ -19,12 +19,13 @@
         <img src="../public/android-chrome-192x192.png" alt="imagen" />
         <h2>IMAPI</h2>
       </div>
-      
+
       <ul>
         <li>
           <a href="/imapi/api">Api</a>
         </li>
-      </ul><a href="/imapi/login/">Entrar</a>
+      </ul>
+      <a href="/imapi/login/">Entrar</a>
     </nav>
     <h1>Registrate</h1>
     <form
@@ -33,9 +34,16 @@
       method="post"
       id="formulario"
     >
-      <input type="text" pattern="[A-Za-z0-9_-]{1,30}" name="nombre" placeholder="Nombre" id="nombre" />
       <input
         type="text"
+        pattern="[A-Za-z0-9_-]{1,30}"
+        name="nombre"
+        placeholder="Nombre"
+        id="nombre"
+      />
+      <input
+        type="text"
+        pattern="[A-Za-z0-9_-]{1,30}"
         name="apellidos"
         placeholder="Apellidos"
         required
@@ -44,12 +52,14 @@
       <input type="email" name="mail" placeholder="Mail" id="mail" />
       <input
         type="password"
+        pattern="[A-Za-z0-9_-]{1,30}"
         name="password"
         placeholder="Contraseña"
         id="passwd"
       />
       <input
         type="password"
+        pattern="[A-Za-z0-9_-]{1,30}"
         placeholder="Repita la contraseña"
         required
         id="repasswd"
