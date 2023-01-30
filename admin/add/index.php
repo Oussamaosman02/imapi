@@ -44,9 +44,9 @@ if (!$reg) {
   </nav>
   <h1>Nuevo admin</h1>
   <form action="nuevoadmin.php" method="post">
-    <input type="text" placeholder="Nombre" name="name" />
+    <input type="text" pattern="[A-Za-z0-9_-]{1,30}" placeholder="Nombre" name="name" />
     <input type="mail" placeholder="Mail" name="mail" />
-    <input type="password" placeholder="contraseña" name="contra" />
+    <input type="password" pattern="[A-Za-z0-9_-]{1,30}" placeholder="contraseña" name="contra" />
     <input type="submit" value="Crear" />
   </form>
 </body>

@@ -30,7 +30,7 @@
     <h1>Iniciar sesión Admin</h1>
     <form action="login.php" method="post">
       <input type="email" name="mail" placeholder="Mail" />
-      <input type="password" name="contra" placeholder="Contraseña" />
+      <input type="password" pattern="[A-Za-z0-9_-]{1,30}" name="contra" placeholder="Contraseña" />
       <input type="submit" value="Entrar" />
     </form>
   </body>

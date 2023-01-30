@@ -65,22 +65,22 @@ if (empty($_SESSION['correo'])) {
       <article>
         <h4>Nombre</h4>
         <form action="newname.php" method="post">
-          <input type="text" name="cambio" required placeholder="Nuevo Nombre" />
+          <input type="text" pattern="[A-Za-z0-9_-]{1,30}" name="cambio" required placeholder="Nuevo Nombre" />
           <input type="submit" />
         </form>
       </article>
       <article>
         <h4>Mail</h4>
         <form action="newmail.php" method="post">
-          <input type="text" name="cambio" required placeholder="Nuevo Mail" />
+          <input type="text" pattern="[A-Za-z0-9_-]{1,30}" name="cambio" required placeholder="Nuevo Mail" />
           <input type="submit" />
         </form>
       </article>
       <article>
         <h4>Contraseña</h4>
         <form action="newpasswd.php" method="post">
-          <input type="text" name="contra" required placeholder="Contraseña Actual" />
-          <input type="text" name="cambio" required placeholder="Contraseña nueva" />
+          <input type="password" pattern="[A-Za-z0-9_-]{1,30}" name="contra" required placeholder="Contraseña Actual" />
+          <input type="password" pattern="[A-Za-z0-9_-]{1,30}" name="cambio" required placeholder="Contraseña nueva" />
           <input type="submit" />
         </form>
       </article>

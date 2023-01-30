@@ -19,18 +19,20 @@
         <img src="../public/android-chrome-192x192.png" alt="imagen" />
         <h2>IMAPI</h2>
       </div>
-      
+
       <ul>
         <li>
           <a href="/imapi/api">Api</a>
         </li>
-      </ul><a href="/imapi/dashboard">Entrar</a>
+      </ul>
+      <a href="/imapi/dashboard">Entrar</a>
     </nav>
     <h1>Entrar</h1>
     <form action="login.php" method="post">
       <input type="email" placeholder="Mail" required name="mail" id="mail" />
       <input
         type="password"
+        pattern="[A-Za-z0-9_-]{1,30}"
         placeholder="Contraseña"
         name="passwd"
         required

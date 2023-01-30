@@ -48,8 +48,8 @@ if (!$reg) {
   <form action="img.php" method="post" onsubmit="return handleSubmit()">
     <input type="number" name="width" required id="width" placeholder="width" />
     <input type="number" name="height" required id="height" placeholder="height" />
-    <input type="text" name="imagen" id="imagen" placeholder="imagen" />
-    <input type="text" name="extension" id="extension" placeholder="extension" />
+    <input type="text" pattern="[A-Za-z0-9_-]{1,30}" name="imagen" id="imagen" placeholder="imagen" />
+    <input type="text" pattern="[A-Za-z0-9_-]{1,30}" name="extension" id="extension" placeholder="extension" />
     <select name="tipo" id="tipo">
       <option value="gratis">gratis</option>
       <option value="pago">pago</option>
