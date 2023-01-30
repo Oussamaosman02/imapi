@@ -57,7 +57,7 @@ if (empty($_SESSION['correo'])) {
         <?php
         echo "<input type='hidden' name='cambio' value='$mail'>";
         ?>
-        <button class="borrar">Borrar Cuenta</button>
+        <input type="submit" class="borrar" value="Borrar Cuenta" />
         ¡No se puede deshacer esta acción!
       </form>
     </section>
